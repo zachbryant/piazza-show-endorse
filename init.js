@@ -27,10 +27,9 @@ function interval() {
       update();
     }
     if (P.note_view.content.proxy !== true) {
-      console.log("content proxy false");
       P.note_view = new Proxy(P.note_view, {
         set: function (target, key, value) {
-          console.log(`${key} set to ${value}`);
+          //console.log(`${key} set to ${value}`);
           target[key] = value;
           update();
         }
