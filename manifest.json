@@ -1,23 +1,23 @@
 {
-	"name": "Piazza show endorsers",
-	"version": "1.0",
-	"description": "See who endorsed an answer or note!",
-	"permissions": [],
-	"manifest_version": 2,
-	"browser_action": {
-		"default_icon": "icon128.png",
-		"icons": {
-			"16": "icon16.png",
-			"24": "icon24.png",
-			"32": "icon32.png"
-		}
-	},
-	"content_scripts": [{
-		"run_at": "document_idle",
-		"js": ["init.js"],
-		"matches": [
-			"https://piazza.com/class/*",
-			"http://piazza.com/class/*"
-		]
-	}]
+  "name": "Piazza show endorsers",
+  "version": "1.0",
+  "description": "See who endorsed an answer or note!",
+  "permissions": [],
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "icons": {
+      "16": "icon16.png",
+      "24": "icon24.png",
+      "32": "icon32.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "js": ["init.js"],
+      "matches": ["https://piazza.com/class/*", "http://piazza.com/class/*"]
+    }
+  ]
 }
