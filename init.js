@@ -9,14 +9,21 @@ function addJankIntoDom() {
 }
 addJankIntoDom();
 
-/*window.oldUrlParams = new URLSearchParams(window.location.search);
-window.oldCid = oldUrlParams.get("cid");*/
+window.oldUrlParams = new URLSearchParams(window.location.search);
+window.oldCid = oldUrlParams.get("cid");
 
 function interval() {
   setInterval(function() {
     if (!window.hasOwnProperty("P")) {
       console.error("P is undefined!");
       return;
+    }
+    var curUrlParams = new URLSearchParams(window.location.search);
+    var curCid = curUrlParams.get("cid");
+    if (curCid === undefined || curCid == window.oldCid) return;
+    else {
+        window.oldUrlPrarams = curUrlParams;
+	window.oldCid = curCid;
     }
     var endorsements = [
       {
