@@ -26,6 +26,7 @@ function interval() {
       window.oldCid = curCid;
       update();
     }
+    if (P.note_view.content === null) return;
     if (P.note_view.content.proxy !== true) {
       P.note_view = new Proxy(P.note_view, {
         set: function (target, key, value) {
@@ -45,6 +46,7 @@ function update() {
     console.error("P is undefined!");
     return;
   }
+  if (P.note_view.content === null) return;
   var endorsements = [{
     sel: ".good_note",
     class: "good_note",
