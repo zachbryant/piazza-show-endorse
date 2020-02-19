@@ -6,4 +6,4 @@ Ever wanted to know who endorsed a piazza post? Now you can see it easily! Just 
 
 Thanks for sending all that information over to the client, Piazza!
 
-![screenshot][screenshot.png]
+![screenshot](screenshot.png)
