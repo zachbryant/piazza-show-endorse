@@ -1,6 +1,6 @@
 {
   "name": "Piazza show endorsers",
-  "version": "1.0",
+  "version": "1.1",
   "description": "See who endorsed an answer or note!",
   "permissions": [],
   "manifest_version": 2,
